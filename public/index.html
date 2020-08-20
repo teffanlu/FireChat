@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAyyBpt6Bu7G6DJBFyYpO8BDwrCpQt12hY",
+        authDomain: "firechat-4d826.firebaseapp.com",
+        databaseURL: "https://firechat-4d826.firebaseio.com",
+        projectId: "firechat-4d826",
+        storageBucket: "firechat-4d826.appspot.com",
+        messagingSenderId: "446797171810",
+        appId: "1:446797171810:web:a236d622689ddb9439d53b"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <title>ChatFire</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand" id="nombUsuario">CHAT</span>
+        <div id="botones">
+        </div>
+      </nav>
+      <main id="contenidoestable" class="mt-3" style="height: 75vh; overflow-y:scroll"></main>
+      <form id="espacioChat">
+        <input type="text" class="form-control" placeholder="Introduce el mensaje" id="texto">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="app.js"></script>
+    
+  </body>
+</html>
